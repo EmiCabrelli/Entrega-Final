@@ -1,0 +1,130 @@
+[
+    {
+        "nombre": "Aatrox",
+        "coste": 1,
+        "clase": "Heavyweight",
+        "origen": "Mighty Mech",
+        "rol": "tanque",
+        "mainStat": "ad"
+    },{
+        "nombre": "Lucian",
+        "coste": 1,
+        "clase": "Sorcerer",
+        "origen": "Mighty Mech",
+        "rol": "caster",
+        "mainStat": "ap"
+    },{
+        "nombre": "Gangplank",
+        "coste": 2,
+        "clase": "Duelist",
+        "origen": "Mighty Mech",
+        "rol": "peleador",
+        "mainStat": "ad"
+    },{
+        "nombre": "Senna",
+        "coste": 3,
+        "clase": "Executioner",
+        "origen": "MightyMech",
+        "rol": "caster",
+        "mainStat": "ad"
+    },{
+        "nombre": "Jarvan",
+        "coste": 4,
+        "clase": "Strategist",
+        "origen": "Mighty Mech",
+        "rol": "tanque",
+        "mainStat": "hp"
+    },{
+        "nombre": "Karma",
+        "coste": 4,
+        "clase": "Sorcerer",
+        "origen": "Mighty Mech",
+        "rol": "caster",
+        "mainStat": "ap"
+        
+    },{
+        "nombre": "Yone",
+        "coste": 5,
+        "clase": "Edgelord",
+        "origen": "Mighty Mech",
+        "rol": "peleador",
+        "mainStat": "ad"
+    },{
+        "nombre": "Malphite",
+        "coste": 1,
+        "clase": "Protector",
+        "origen": "The Crew",
+        "rol": "tanque",
+        "mainStat": "hp"
+    },{
+        "nombre": "Sivir",
+        "coste": 1,
+        "clase": "Sniper",
+        "origen": "The Crew",
+        "rol": "caster",
+        "mainStat": "ad"
+    },{
+        "nombre": "Shen",
+        "coste": 2,
+        "clase": "Bastion",
+        "origen": "The Crew",
+        "rol": "tanque",
+        "mainStat": "hp"
+    },{
+        "nombre": "Ziggs",
+        "coste": 3,
+        "clase": "Strategist",
+        "origen": "The Crew",
+        "rol": "tirador",
+        "mainStat": "ap"
+    },{
+        "nombre": "Twisted Fate",
+        "coste": 5,
+        "clase": "Rogue Captain",
+        "origen": "The Crew",
+        "rol": "tirador",
+        "mainStat": "hibrido"
+    },{
+        "nombre": "Kayle",
+        "coste": 1,
+        "clase": "Duelist",
+        "origen": "Wraith",
+        "rol": "especialista",
+        "mainStat": "ap"
+    },{
+        "nombre": "Zac",
+        "coste": 1,
+        "clase": "Heavyweight",
+        "origen": "Wraith",
+        "rol": "tanque",
+        "mainStat": "ap"
+    },{
+        "nombre": "Jhin",
+        "coste": 2,
+        "clase": "Sniper",
+        "origen": "Wraith",
+        "rol": "especialista",
+        "mainStat": "ad"
+    },{
+        "nombre": "Malzahar",
+        "coste": 3,
+        "clase": "Prodigy",
+        "origen": "Wraith",
+        "rol": "caster",
+        "mainStat": "ap"
+    },{
+        "nombre": "K'sante",
+        "coste": 4,
+        "clase": "Protector",
+        "origen": "Wraith",
+        "rol": "tanque",
+        "mainStat": "hp"
+    },{
+        "nombre": "Varus",
+        "coste": 5,
+        "clase": "Sniper",
+        "origen": "Wraith",
+        "rol": "especialista",
+        "mainStat": "hibrido"
+    }
+]
