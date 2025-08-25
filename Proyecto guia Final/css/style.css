@@ -9,6 +9,23 @@ img {
         height: auto;   
 }
 
+#filtro {
+        width: 410px;      
+        height: 40px;      
+        font-size: 1.2em;    
+        margin: 10px;
+        border-radius: 8px;
+}
+
+#filtro-select {
+        width: 260px;      
+        height: 40px;      
+        font-size: 1.2em;    
+        margin: 10px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.616);
+}
+
 #intro {
         font-size: 1.5em;
         margin: 50px;

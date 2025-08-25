@@ -1,22 +1,4 @@
-team.onclick = () => {
-    let = teamStorage = localStorage.getItem("equipo")
-    teamStorage = JSON.parse(teamStorage)
-
-    document.getElementById("title").innerHTML = `
-        <h1>Equipo</h1>
-        <div id="team-container"></div>
-        <button id="costo">Calcular Costo</button>
-        <button id="borrar-equipo">Borrar Equipo</button>
-    `
-    if (!teamStorage || teamStorage.length === 0) {
-        document.getElementById("team-container").innerHTML = `
-            <p>El equipo esta vacio.</p>
-        `
-    }else{
-        verEquipo(teamStorage)
-    }
-    
-    function verEquipo(teamArray) {
+function verEquipo(teamArray) {
         document.getElementById("team-container").innerHTML = ""
         teamArray.forEach((campeon, sacar) => {
             const teamCard = document.createElement("div")
@@ -41,6 +23,25 @@ team.onclick = () => {
             document.getElementById("team-container").innerHTML = "<p>El equipo está vacío.</p>"
         }
     }
+
+let = teamStorage = localStorage.getItem("equipo")
+
+team.onclick = () => {
+    teamStorage = JSON.parse(teamStorage)
+
+    document.getElementById("title").innerHTML = `
+        <h1>Equipo</h1>
+        <div id="team-container"></div>
+        <button id="costo">Confirmar</button>
+        <button id="borrar-equipo">Borrar Equipo</button>
+    `
+    if (!teamStorage || teamStorage.length === 0) {
+        document.getElementById("team-container").innerHTML = `
+            <p>El equipo esta vacio.</p>
+        `
+    }else{
+        verEquipo(teamStorage)
+    }
     
     document.getElementById("costo").onclick = () => {
         if (!teamStorage || teamStorage.length === 0) {
@@ -52,8 +53,32 @@ team.onclick = () => {
             return
         }
         const costeTotal = teamStorage.reduce((costo, campeon) => costo + Number(campeon.coste), 0)
-            Swal.fire(`Vas a necesitar ${costeTotal} de oro para conseguir todo tu equipo.`)
-            
+        const sinergias = {}
+        teamStorage.forEach(campeon => {
+            if (sinergias[campeon.clase]) {
+                sinergias[campeon.clase] += 1
+            } else {
+                sinergias[campeon.clase] = 1
+            }
+            if (sinergias[campeon.origen]) {
+                sinergias[campeon.origen] += 1
+            } else {
+                sinergias[campeon.origen] = 1
+            }
+        })
+
+        let sinergyCount = ""
+        for (const clase in sinergias) {
+            sinergyCount += `${sinergias[clase]} ${clase}(s) en el equipo.<br>`
+        }
+
+        Swal.fire({
+            title: "Sinergias en tu equipo",
+            html: `Vas a necesitar ${costeTotal} de oro para conseguir todo tu equipo.<br><br>${sinergyCount}`,
+            icon: "info",
+            confirmButtonText: "Suerte!",
+        })
+
     }
     
     document.getElementById("borrar-equipo").onclick = () => {
@@ -62,6 +87,9 @@ team.onclick = () => {
     }
 
     document.getElementById("volver-placeholder").innerHTML = `
-        <button onclick="location.reload()">Volver al Inicio</button>`
-    
+        <button>Volver al Inicio</button>
+    `
+    document.querySelector("#volver-placeholder button").onclick = () => {
+        location.reload()
+    }
 }
